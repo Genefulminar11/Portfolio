@@ -23,6 +23,13 @@
   
   <!-- Custom CSS file - Your personal styling -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Apply saved theme immediately to prevent flash of light mode -->
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
 </head>
 <body>
   <!-- Main container with flexbox layout (side-by-side layout) -->
@@ -96,12 +103,6 @@
               </button>
             </li>
 
-            <!-- Others Button (added) -->
-            <li class="mb-3">
-              <button class="d-block w-100 text-decoration-none text-dark fw-500 py-2 px-3 rounded-3 hover-effect border-0 bg-transparent menu-btn" data-section="others" type="button">
-                <i class="fas fa-ellipsis-h me-2"></i><span class="menu-label">Others</span>
-              </button>
-            </li>
 
           </ul>
         </nav>
@@ -111,7 +112,18 @@
     <!-- MAIN CONTENT AREA (Right side) -->
     <main class="col-12 col-lg-9 p-2 p-md-3 p-lg-3 d-flex flex-column">
       <!-- White container that holds all content sections -->
-      <section class="bg-white rounded-4 shadow-lg p-3 p-md-4 p-lg-5 d-flex flex-column justify-content-center align-items-center text-center">
+      <section class="bg-white rounded-4 shadow-lg p-3 p-md-4 p-lg-5 d-flex flex-column justify-content-center align-items-center text-center position-relative">
+        
+        <!-- Dark Mode Toggle -->
+        <div class="theme-toggle-wrapper">
+          <label class="theme-switch" title="Toggle dark mode">
+            <input type="checkbox" id="themeToggle">
+            <span class="theme-slider">
+              <i class="fas fa-sun theme-icon-sun"></i>
+              <i class="fas fa-moon theme-icon-moon"></i>
+            </span>
+          </label>
+        </div>
         
         <!-- ==================== HOME SECTION ==================== -->
         <div id="home" class="section-content w-100">
@@ -177,10 +189,6 @@
           <!-- content will be loaded from contact.html -->
         </div>
 
-        <!-- ==================== OTHERS SECTION (placeholder) ==================== -->
-        <div id="others" class="section-content d-none w-100">
-          <!-- content will be loaded from others.html -->
-        </div>
 
       </section>
     </main>
