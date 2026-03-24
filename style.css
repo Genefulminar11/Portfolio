@@ -44,3 +44,87 @@ aside {
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Elegant greeting typography */
+.elegant-greeting {
+  font-family: 'Lora', serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.elegant-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.elegant-subtitle {
+  font-family: 'Lora', serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+
+/* Decorative divider */
+.divider {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #0d6efd, transparent);
+  border-radius: 2px;
+}
+
+/* Hero Section Styling */
+.hero-content {
+  padding: 3rem 2rem;
+}
+
+.hero-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  line-height: 1.1;
+  color: #0d6efd;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-family: 'Lora', serif;
+  letter-spacing: 2px;
+  color: #666;
+  font-weight: 300;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #0d6efd;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: rgba(13, 110, 253, 0.1);
+  color: #0d6efd;
+  transform: translateY(-2px);
+}
+
+.social-link i {
+  font-size: 1.2rem;
+}
+

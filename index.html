@@ -1,107 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Meta tags for character encoding and responsive design -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gene's VA Portfolio</title>
+  
+  <!-- SEO Meta tags for search engines and social media -->
   <meta name="description" content="Portfolio of Gene Ryan, a virtual‑assistant specialist showcasing projects, services, and contact information.">
   <meta property="og:title" content="Gene Ryan – VA Portfolio">
   <meta property="og:description" content="Explore my virtual‑assistant services and recent projects.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://yourdomain.com/">
   <meta property="og:image" content="https://yourdomain.com/preview.jpg">
-  <!-- Bootstrap CSS -->
+  
+  <!-- Bootstrap CSS - Framework for responsive design -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom CSS -->
+  
+  <!-- Custom CSS file - Your personal styling -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container-fluid">
-    <div class="row align-items-start h-100">
-      <aside class="col-12 col-md-3 mb-4 order-md-1 p-3" style="height: 100vh; position: sticky; top: 0; overflow-y: auto;">
-        <div class="sky-blue-bg rounded-4 shadow-lg h-100 p-4 d-flex flex-column">
-          <nav class="text-center d-flex flex-column justify-content-start" aria-label="Primary menu">
-            <h3 class="h5 mb-4 fw-bold text-dark">Menu</h3>
-            <ul class="list-unstyled mb-0">
-              <li class="mb-3">
-                <button class="d-block w-100 text-decoration-none text-dark fw-500 py-2 px-3 rounded-3 hover-effect border-0 bg-transparent menu-btn" data-section="home">
-                  <i class="bi bi-house-door me-2"></i>Home
-                </button>
-              </li>
-              <li class="mb-3">
-                <button class="d-block w-100 text-decoration-none text-dark fw-500 py-2 px-3 rounded-3 hover-effect border-0 bg-transparent menu-btn" data-section="about">
-                  <i class="bi bi-person-circle me-2"></i>About me
-                </button>
-              </li>
-              <li class="mb-3">
-                <button class="d-block w-100 text-decoration-none text-dark fw-500 py-2 px-3 rounded-3 hover-effect border-0 bg-transparent menu-btn" data-section="projects">
-                  <i class="bi bi-briefcase me-2"></i>Projects
-                </button>
-              </li>
-              <li class="mb-3">
-                <button class="d-block w-100 text-decoration-none text-dark fw-500 py-2 px-3 rounded-3 hover-effect border-0 bg-transparent menu-btn" data-section="resume">
-                  <i class="bi bi-file-earmark me-2"></i>Resume
-                </button>
-              </li>
-            </ul>
-          </nav>
+  <!-- Main container with flexbox layout (side-by-side layout) -->
+  <div class="container-fluid" style="display: flex; min-height: 100vh;">
+    
+    <!-- SIDEBAR MENU (Left side) -->
+    <aside class="col-12 col-md-3 order-md-1 p-3 d-flex flex-column" style="height: 100vh; overflow-y: auto; position: sticky; top: 0;">
+      <!-- Blue background box for menu -->
+      <div class="sky-blue-bg rounded-4 shadow-lg flex-grow-1 p-4 d-flex flex-column">
+        
+        <!-- Profile Picture Section -->
+        <div class="text-center mb-4">
+          <img src="/assets/Profile.jpg" alt="Gene Ryan" class="rounded-circle" style="width: 250px; height: 250px; object-fit: cover; border: 4px solid white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
         </div>
-      </aside>
+        
+        <!-- Navigation Menu -->
+        <nav class="text-center d-flex flex-column justify-content-center align-items-center flex-grow-1" aria-label="Primary menu">
+          <ul class="list-unstyled mb-0">
+            
+            <!-- Home Button -->
+            <li class="mb-3">
+              <button class="d-block w-100 text-decoration-none text-dark fw-500 py-2 px-3 rounded-3 hover-effect border-0 bg-transparent menu-btn" data-section="home">
+                <i class="bi bi-house-door me-2"></i>Home
+              </button>
+            </li>
+            
+            <!-- About Me Button -->
+            <li class="mb-3">
+              <button class="d-block w-100 text-decoration-none text-dark fw-500 py-2 px-3 rounded-3 hover-effect border-0 bg-transparent menu-btn" data-section="about">
+                <i class="bi bi-person-circle me-2"></i>About me
+              </button>
+            </li>
+            
+            <!-- Projects Button -->
+            <li class="mb-3">
+              <button class="d-block w-100 text-decoration-none text-dark fw-500 py-2 px-3 rounded-3 hover-effect border-0 bg-transparent menu-btn" data-section="projects">
+                <i class="bi bi-briefcase me-2"></i>Projects
+              </button>
+            </li>
+            
+            <!-- Resume Button -->
+            <li class="mb-3">
+              <button class="d-block w-100 text-decoration-none text-dark fw-500 py-2 px-3 rounded-3 hover-effect border-0 bg-transparent menu-btn" data-section="resume">
+                <i class="bi bi-file-earmark me-2"></i>Resume
+              </button>
+            </li>
+            
+            <!-- Contact Button -->
+            <li class="mb-3">
+              <button class="d-block w-100 text-decoration-none text-dark fw-500 py-2 px-3 rounded-3 hover-effect border-0 bg-transparent menu-btn" data-section="contact">
+                <i class="bi bi-envelope me-2"></i>Contact
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
 
-      <main class="col-12 col-md-9 mb-4 order-md-2 p-3" style="height: 100vh; overflow-y: auto;">
-        <section class="bg-white rounded-4 shadow-lg h-100 p-4 d-flex flex-column justify-content-center align-items-center text-center" aria-labelledby="hero-title">
-          
-          <!-- Hero Section (Home) -->
-          <div id="home" class="section-content">
-            <h2 id="hero-title" class="display-3 fw-bold text-primary mb-4">
-              <span class="text-dark">Hello, I'm</span> <span class="text-primary">Gene</span>
-            </h2>
-            <p class="text-muted mb-4 fs-5">Welcome to my Virtual Assistant portfolio.</p>
+    <!-- MAIN CONTENT AREA (Right side) -->
+    <main class="col-12 col-md-9 order-md-2 p-3" style="min-height: 100vh; display: flex; flex-direction: column;">
+      <!-- White container that holds all content sections -->
+      <section class="bg-white rounded-4 shadow-lg p-4 flex-grow-1 d-flex flex-column justify-content-center align-items-center text-center">
+        
+        <!-- ==================== HOME SECTION ==================== -->
+        <div id="home" class="section-content">
+          <div class="hero-content text-center">
+            <!-- Large name heading -->
+            <h1 class="hero-name fw-bold mb-3">
+              Gene<br>Ryan
+            </h1>
+            <!-- Job title -->
+            <p class="hero-title fs-4 mb-5">Virtual Assistant Specialist</p>
+            
+            <!-- Social Media Links Section -->
+            <div class="social-links mb-4">
+              <!-- LinkedIn Link -->
+              <a href="https://www.linkedin.com/in/generyan" target="_blank" class="social-link me-3">
+                <i class="bi bi-linkedin"></i> LinkedIn
+              </a>
+              <!-- GitHub Link -->
+              <a href="https://github.com/generyan" target="_blank" class="social-link me-3">
+                <i class="bi bi-github"></i> Github
+              </a>
+              <!-- Facebook Link -->
+              <a href="https://www.facebook.com/generyan" target="_blank" class="social-link me-3">
+                <i class="bi bi-facebook"></i> Facebook
+              </a>
+              <!-- Twitter Link -->
+              <a href="https://twitter.com/generyan" target="_blank" class="social-link">
+                <i class="bi bi-twitter"></i> Twitter
+              </a>
+            </div>
+
+            <!-- Decorative line divider -->
+            <div class="divider mx-auto mb-4"></div>
+            <!-- Tagline -->
+            <p class="text-muted fs-6" style="font-style: italic;">Dedicated to excellence and professional growth</p>
           </div>
+        </div>
 
-          <!-- About Section -->
-          <div id="about" class="section-content d-none">
-            <h2 class="display-4 fw-bold text-primary mb-4">About Me</h2>
-            <p class="text-muted fs-5 mb-3">I'm a dedicated Virtual Assistant with 5+ years of experience in administrative support, scheduling, and email management.</p>
-            <p class="text-muted fs-5">I help businesses streamline their operations and focus on what matters most.</p>
-          </div>
+        <!-- ==================== ABOUT SECTION ==================== -->
+        <div id="about" class="section-content d-none">
+          <h2 class="display-4 fw-bold text-primary mb-4">About Me</h2>
+          <p class="text-muted fs-5 mb-3">I'm a dedicated Virtual Assistant with 5+ years of experience in administrative support, scheduling, and email management.</p>
+          <p class="text-muted fs-5">I help businesses streamline their operations and focus on what matters most.</p>
+        </div>
 
-          <!-- Projects Section -->
-          <div id="projects" class="section-content d-none">
-            <h2 class="display-4 fw-bold text-primary mb-4">Projects</h2>
-            <div class="row text-start">
-              <div class="col-md-6 mb-3">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">Project 1</h5>
-                    <p class="card-text">Description of your project goes here.</p>
+        <!-- ==================== PROJECTS SECTION ==================== -->
+        <div id="projects" class="section-content d-none w-100">
+          <h2 class="display-4 fw-bold text-primary mb-5">My Projects</h2>
+          <!-- Grid layout - 2 columns on medium screens -->
+          <div class="row g-4">
+            
+            <!-- PROJECT CARD 1 -->
+            <div class="col-md-6 mb-4">
+              <div class="project-card card border-0 shadow-lg h-100">
+                <div class="card-body d-flex flex-column">
+                  <!-- Project Title and Links (GitHub & Live) -->
+                  <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h5 class="card-title text-dark fw-bold">Project 1</h5>
+                    <div class="project-icons">
+                      <a href="https://github.com/yourusername/project1" target="_blank" class="text-dark me-2">
+                        <i class="bi bi-github"></i>
+                      </a>
+                      <a href="https://yourlivelink.com" target="_blank" class="text-dark">
+                        <i class="bi bi-box-arrow-up-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- Project Description -->
+                  <p class="card-text text-muted flex-grow-1">Description of your first project goes here. Explain what it does and the technologies used.</p>
+                  <!-- Project Tags/Technologies -->
+                  <div class="project-tags mt-3">
+                    <span class="badge bg-light text-dark me-2">HTML</span>
+                    <span class="badge bg-light text-dark me-2">CSS</span>
+                    <span class="badge bg-light text-dark">JavaScript</span>
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 mb-3">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">Project 2</h5>
-                    <p class="card-text">Description of your project goes here.</p>
+            </div>
+
+            <!-- PROJECT CARD 2 -->
+            <div class="col-md-6 mb-4">
+              <div class="project-card card border-0 shadow-lg h-100">
+                <div class="card-body d-flex flex-column">
+                  <!-- Project Title and Links (GitHub & Live) -->
+                  <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h5 class="card-title text-dark fw-bold">Project 2</h5>
+                    <div class="project-icons">
+                      <a href="https://github.com/yourusername/project2" target="_blank" class="text-dark me-2">
+                        <i class="bi bi-github"></i>
+                      </a>
+                      <a href="https://yourlivelink2.com" target="_blank" class="text-dark">
+                        <i class="bi bi-box-arrow-up-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- Project Description -->
+                  <p class="card-text text-muted flex-grow-1">Description of your second project goes here. Explain what it does and the technologies used.</p>
+                  <!-- Project Tags/Technologies -->
+                  <div class="project-tags mt-3">
+                    <span class="badge bg-light text-dark me-2">React</span>
+                    <span class="badge bg-light text-dark me-2">Node.js</span>
+                    <span class="badge bg-light text-dark">MongoDB</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PROJECT CARD 3 -->
+            <div class="col-md-6 mb-4">
+              <div class="project-card card border-0 shadow-lg h-100">
+                <div class="card-body d-flex flex-column">
+                  <!-- Project Title and Links (GitHub & Live) -->
+                  <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h5 class="card-title text-dark fw-bold">Project 3</h5>
+                    <div class="project-icons">
+                      <a href="https://github.com/yourusername/project3" target="_blank" class="text-dark me-2">
+                        <i class="bi bi-github"></i>
+                      </a>
+                      <a href="https://yourlivelink3.com" target="_blank" class="text-dark">
+                        <i class="bi bi-box-arrow-up-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- Project Description -->
+                  <p class="card-text text-muted flex-grow-1">Description of your third project goes here. Explain what it does and the technologies used.</p>
+                  <!-- Project Tags/Technologies -->
+                  <div class="project-tags mt-3">
+                    <span class="badge bg-light text-dark me-2">Vue.js</span>
+                    <span class="badge bg-light text-dark me-2">Firebase</span>
+                    <span class="badge bg-light text-dark">Tailwind</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PROJECT CARD 4 -->
+            <div class="col-md-6 mb-4">
+              <div class="project-card card border-0 shadow-lg h-100">
+                <div class="card-body d-flex flex-column">
+                  <!-- Project Title and Links (GitHub & Live) -->
+                  <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h5 class="card-title text-dark fw-bold">Project 4</h5>
+                    <div class="project-icons">
+                      <a href="https://github.com/yourusername/project4" target="_blank" class="text-dark me-2">
+                        <i class="bi bi-github"></i>
+                      </a>
+                      <a href="https://yourlivelink4.com" target="_blank" class="text-dark">
+                        <i class="bi bi-box-arrow-up-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- Project Description -->
+                  <p class="card-text text-muted flex-grow-1">Description of your fourth project goes here. Explain what it does and the technologies used.</p>
+                  <!-- Project Tags/Technologies -->
+                  <div class="project-tags mt-3">
+                    <span class="badge bg-light text-dark me-2">Python</span>
+                    <span class="badge bg-light text-dark me-2">Django</span>
+                    <span class="badge bg-light text-dark">PostgreSQL</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- Resume Section -->
-          <div id="resume" class="section-content d-none">
-            <h2 class="display-4 fw-bold text-primary mb-4">Resume</h2>
-            <p class="text-muted fs-5">Your resume content goes here.</p>
+        <!-- ==================== RESUME SECTION ==================== -->
+        <div id="resume" class="section-content d-none">
+          <h2 class="display-4 fw-bold text-primary mb-4">Resume</h2>
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="resume-content text-start mb-4">
+                <!-- Name and Title -->
+                <h3 class="h5 text-primary mb-3">Gene Ryan Fulminar</h3>
+                <p class="text-muted mb-1">Virtual Assistant Specialist</p>
+                <p class="text-muted small">Email: gene@example.com | Phone: +1-555-123-4567</p>
+                
+                <hr class="my-3">
+                
+                <!-- Professional Summary -->
+                <h4 class="h6 text-primary mt-4 mb-3">Professional Summary</h4>
+                <p class="text-muted">Dedicated Virtual Assistant with 5+ years of experience in administrative support, scheduling, email management, and client relations. Proven ability to streamline operations and improve business efficiency.</p>
+                
+                <!-- Core Competencies -->
+                <h4 class="h6 text-primary mt-4 mb-3">Core Competencies</h4>
+                <ul class="text-muted small">
+                  <li>Administrative Support & Scheduling</li>
+                  <li>Email & Calendar Management</li>
+                  <li>Customer Relations & Communication</li>
+                  <li>Data Entry & Organization</li>
+                  <li>Project Coordination</li>
+                  <li>Microsoft Office Suite & Google Workspace</li>
+                  <li>Social Media Management</li>
+                  <li>Bookkeeping & Invoice Processing</li>
+                </ul>
+                
+                <!-- Professional Experience -->
+                <h4 class="h6 text-primary mt-4 mb-3">Professional Experience</h4>
+                <p class="text-muted mb-1"><strong>Virtual Assistant</strong> - Freelance (2019 - Present)</p>
+                <ul class="text-muted small">
+                  <li>Managed schedules and communications for 10+ clients</li>
+                  <li>Processed invoices and maintained financial records</li>
+                  <li>Coordinated meetings and maintained project timelines</li>
+                </ul>
+                
+                <!-- Education -->
+                <h4 class="h6 text-primary mt-4 mb-3">Education</h4>
+                <p class="text-muted mb-1"><strong>Certificate in Virtual Assistance</strong> - Online Academy (2019)</p>
+                <p class="text-muted mb-1"><strong>High School Diploma</strong> - (2018)</p>
+              </div>
+              
+              <!-- Resume Download Button -->
+              <div class="text-center">
+                <a href="Gene_Ryan_Fulminar_Resume.pdf" download class="btn btn-primary btn-lg">
+                  <i class="bi bi-download me-2"></i>Download Resume (PDF)
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== CONTACT SECTION ==================== -->
+        <div id="contact" class="section-content d-none w-100">
+          <h2 class="display-4 fw-bold text-primary mb-4">Get In Touch</h2>
+          
+          <div class="row mb-5">
+            <div class="col-md-6 mx-auto">
+              <div class="card border-0 shadow-sm p-4 mb-4">
+                <!-- Contact Information Title -->
+                <h4 class="h6 text-primary mb-3">Contact Information</h4>
+                <!-- Email -->
+                <p class="text-muted mb-2">
+                  <i class="bi bi-envelope me-2"></i>
+                  <a href="mailto:g.fulminar1199@aol.com" class="text-decoration-none text-dark">g.fulminar1199@aol.com</a>
+                </p>
+                <!-- Phone Numbers -->
+                <p class="text-muted mb-2">
+                  <i class="bi bi-telephone me-2"></i>
+                  <a href="tel:+639765450844" class="text-decoration-none text-dark">+63 976 545 0844</a>
+                </p>
+                <p class="text-muted mb-0">
+                  <i class="bi bi-telephone me-2"></i>
+                  <a href="tel:+639920635223" class="text-decoration-none text-dark">+63 992 063 5223</a>
+                </p>
+              </div>
+            </div>
           </div>
 
-        </section>
-      </main>
-    </div>
+          <div class="row">
+            <div class="col-md-8 mx-auto">
+              <!-- Message Sending Title -->
+              <h4 class="h6 text-primary mb-4 text-start">Send Me a Message</h4>
+              <!-- Contact Form -->
+              <form id="contactForm" class="text-start">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Full Name</label>
+                  <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input type="text" class="form-control" id="subject" name="subject" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">
+                  <i class="bi bi-send me-2"></i>Send Message
+                </button>
+              </form>
+              <p class="text-muted small mt-3 text-center">Your message will be sent to g.fulminar1199@aol.com</p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
   </div>
 
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:wght@400;500&display=swap" rel="stylesheet">
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Custom JS -->
@@ -118,6 +387,24 @@
         // Show selected section
         document.getElementById(section).classList.remove('d-none');
       });
+    });
+
+    // Contact form submission
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+      
+      // Create mailto link
+      const mailtoLink = `mailto:g.fulminar1199@aol.com?subject=${encodeURIComponent(subject)}&body=From: ${encodeURIComponent(name)} (${encodeURIComponent(email)})%0A%0A${encodeURIComponent(message)}`;
+      
+      window.location.href = mailtoLink;
+      
+      // Reset form
+      this.reset();
     });
   </script>
 </body>
