@@ -92,7 +92,7 @@ function initContactHandlers() {
   });
 }
 
-// Menu click handler (add contact case)
+// Menu click handler
 menuButtons.forEach(btn => {
   btn.addEventListener('click', async function(e) {
     e.preventDefault();
@@ -110,6 +110,9 @@ menuButtons.forEach(btn => {
     } else if (section === 'projects') {
       await loadFragment('projects.html', 'projects');
       document.getElementById('projects').classList.remove('d-none');
+    } else if (section === 'services') {
+      await loadFragment('services.html', 'services');
+      document.getElementById('services').classList.remove('d-none');
     } else if (section === 'resume') {
       await loadFragment('resume.html', 'resume');
       document.getElementById('resume').classList.remove('d-none');
