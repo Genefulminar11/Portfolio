@@ -326,6 +326,11 @@ aside {
   margin-bottom: 0.5rem;
 }
 
+.profile-pic {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
 .menu-toggle {
   position: absolute;
   bottom: -10px;
@@ -370,6 +375,13 @@ aside {
 
   .sky-blue-bg {
     padding: 1.5rem 1rem !important;
+  }
+
+  .profile-pic {
+    width: 80px !important;
+    height: 80px !important;
+    border: 4px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
   .sidebar.menu-collapsed {
@@ -451,6 +463,13 @@ aside {
     position: sticky;
     top: 0;
     z-index: 999;
+  }
+
+  .profile-pic {
+    width: 200px !important;
+    height: 200px !important;
+    border: 4px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
   .menu-nav {
