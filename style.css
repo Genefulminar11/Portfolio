@@ -1,99 +1,14 @@
-/* Reset */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-}
-
-/* Header */
-header {
+nav {
   background: #222;
-  color: #fff;
   padding: 1rem;
 }
-header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header ul {
-  list-style: none;
-  display: flex;
-}
-header ul li {
-  margin-left: 20px;
-}
-header ul li a {
+nav a {
   color: #fff;
+  margin-right: 15px;
   text-decoration: none;
 }
-
-/* Hero */
 .hero {
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 3rem;
   background: #f4f4f4;
-}
-.hero img {
-  width: 150px;
-  border-radius: 50%;
-}
-.hero .btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 10px 20px;
-  background: #222;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-/* Sections */
-section {
-  padding: 2rem 1rem;
-}
-#projects .project-grid {
-  display: flex;
-  gap: 20px;
-}
-.project {
-  flex: 1;
-  background: #fafafa;
-  padding: 1rem;
-  border-radius: 8px;
-  text-align: center;
-}
-.project img {
-  width: 100%;
-  border-radius: 5px;
-}
-
-/* Contact */
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  margin: auto;
-}
-form input, form textarea {
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-}
-form button {
-  background: #222;
-  color: #fff;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #222;
-  color: #fff;
 }
