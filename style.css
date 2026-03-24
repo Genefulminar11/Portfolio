@@ -243,6 +243,41 @@ aside {
   text-decoration: underline;
 }
 
+/* Blog Section Styling */
+.blog-card {
+  transition: all 0.3s ease;
+  border-radius: 0.75rem;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(13, 110, 253, 0.2) !important;
+}
+
+.blog-card .badge {
+  font-size: 0.65rem !important;
+  padding: 0.35rem 0.6rem !important;
+}
+
+.blog-card .card-title {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.blog-card .card-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.blog-card a {
+  transition: all 0.3s ease;
+}
+
+.blog-card a:hover {
+  color: #0d6efd !important;
+  transform: translateX(5px);
+}
+
 /* PDF Print Optimization */
 @media print {
   .resume-wrapper {
@@ -361,13 +396,62 @@ aside {
   transition: transform 0.3s ease;
 }
 
+/* Desktop view - menu always visible */
+@media (min-width: 992px) {
+  .sidebar {
+    min-height: 100vh !important;
+    max-height: none !important;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+
+  .profile-pic {
+    width: 200px !important;
+    height: 200px !important;
+    border: 4px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .menu-nav {
+    max-height: none !important;
+    opacity: 1 !important;
+  }
+
+  .menu-toggle {
+    display: none !important;
+  }
+
+  .menu-label {
+    display: inline !important;
+    font-size: 20px !important;
+  }
+
+  .menu-btn {
+    padding: 0.5rem 1rem !important;
+    font-size: 20px !important;
+  }
+
+  .menu-btn i {
+    margin-right: 0.5rem !important;
+  }
+
+  main {
+    min-height: 100vh;
+  }
+
+  section {
+    min-height: 100vh;
+  }
+}
+
 /* Mobile view - collapsed menu by default */
 @media (max-width: 991.98px) {
   .sidebar {
     width: 100% !important;
     min-height: auto !important;
     height: auto;
-    max-height: calc(100px + 45px + 40px); /* Profile + buttons + toggle */
+    max-height: calc(100px + 45px + 40px);
     overflow: hidden;
     transition: max-height 0.3s ease;
     padding: 1rem 0.75rem !important;
@@ -435,11 +519,12 @@ aside {
   /* Show full menu when expanded */
   .sidebar:not(.menu-collapsed) .menu-label {
     display: inline !important;
+    font-size: 20px !important;
   }
 
   .sidebar:not(.menu-collapsed) .menu-btn {
     padding: 0.5rem 1rem !important;
-    font-size: 0.95rem;
+    font-size: 20px !important;
   }
 
   .sidebar:not(.menu-collapsed) .menu-btn i {
@@ -452,53 +537,6 @@ aside {
 
   section {
     min-height: auto !important;
-  }
-}
-
-/* Desktop view - menu always visible */
-@media (min-width: 992px) {
-  .sidebar {
-    min-height: 100vh !important;
-    max-height: none !important;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-  }
-
-  .profile-pic {
-    width: 200px !important;
-    height: 200px !important;
-    border: 4px solid white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-
-  .menu-nav {
-    max-height: none !important;
-    opacity: 1 !important;
-  }
-
-  .menu-toggle {
-    display: none !important;
-  }
-
-  .menu-label {
-    display: inline !important;
-  }
-
-  .menu-btn {
-    padding: 0.5rem 1rem !important;
-  }
-
-  .menu-btn i {
-    margin-right: 0.5rem !important;
-  }
-
-  main {
-    min-height: 100vh;
-  }
-
-  section {
-    min-height: 100vh;
   }
 }
 
