@@ -10,33 +10,37 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">VA Portfolio</a>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <div class="container my-5">
+    <!-- Use ordering so main appears first on small screens, then menus stack -->
+    <div class="row align-items-start">
+      <aside class="col-12 col-md-4 mb-4 order-md-1">
+        <nav class="p-4 border rounded h-100 text-center" aria-label="Primary menu">
+          
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#about" class="d-block text-decoration-none text-primary">About me</a>
+            </li>
+            <li>
+              <a href="#projects" class="d-block text-decoration-none text-primary">Projects</a>
+            </li>
+            <li>
+              <a href="#contacts" class="d-block text-decoration-none text-primary">Contacts</a>
+            </li>
+            <li>
+              <a href="#resume" class="d-block text-decoration-none text-primary">Resume</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
 
-  <!-- Greeting Section -->
-  <div class="hero d-flex align-items-center justify-content-center text-center">
-    <div class="overlay"></div>
-    <div class="content text-white">
-      <h1>Hello, I’m Gene</h1>
-      <p class="lead">Welcome to my Virtual Assistant portfolio.</p>
+      <main class="col-12 col-md-8 mb-4 order-md-2">
+        <section class="p-4 border rounded h-100 text-center text-md-start" aria-labelledby="hero-title">
+          <h2 id="hero-title" class="h4 text-primary">Hello, I’m Gene</h2>
+          <p class="text-muted mb-0">Welcome to my Virtual Assistant portfolio.</p>
+        </section>
+      </main>
     </div>
   </div>
-
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2026 Gene's VA Portfolio</p>
-  </footer>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

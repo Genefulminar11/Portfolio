@@ -1,33 +1,12 @@
 body, html {
-  height: 100%;
+  height: 100vh; /* Full viewport height */
   margin: 0;
+  background-color: #ffffff; /* Elegant white background */
 }
 
-.hero {
-  position: relative;
-  height: 100vh;
-  background: url('https://github.com/Genefulminar11/Portfolio/blob/main/assets/background.jpg?raw=true') no-repeat center center/cover;
-}
 
-.hero .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.5); /* Faded effect */
-}
-
-.hero .content {
-  position: relative;
-  z-index: 1;
-}
 
 h1 {
   font-weight: 700;
-  font-size: 3rem;
 }
 
-p.lead {
-  font-size: 1.5rem;
-}
