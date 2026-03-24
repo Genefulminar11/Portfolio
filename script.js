@@ -119,6 +119,9 @@ menuButtons.forEach(btn => {
     } else if (section === 'contact') {
       await loadFragment('contact.html', 'contact');
       document.getElementById('contact').classList.remove('d-none');
+    } else if (section === 'others') {
+      await loadFragment('others.html', 'others');
+      document.getElementById('others').classList.remove('d-none');
     } else {
       const el = document.getElementById(section);
       if (el) el.classList.remove('d-none');
