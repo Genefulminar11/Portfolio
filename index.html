@@ -4,47 +4,121 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gene's VA Portfolio</title>
+  <meta name="description" content="Portfolio of Gene Ryan, a virtual‑assistant specialist showcasing projects, services, and contact information.">
+  <meta property="og:title" content="Gene Ryan – VA Portfolio">
+  <meta property="og:description" content="Explore my virtual‑assistant services and recent projects.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com/">
+  <meta property="og:image" content="https://yourdomain.com/preview.jpg">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container my-5">
-    <!-- Use ordering so main appears first on small screens, then menus stack -->
-    <div class="row align-items-start">
-      <aside class="col-12 col-md-4 mb-4 order-md-1">
-        <nav class="p-4 border rounded h-100 text-center" aria-label="Primary menu">
-          
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="#about" class="d-block text-decoration-none text-primary">About me</a>
-            </li>
-            <li>
-              <a href="#projects" class="d-block text-decoration-none text-primary">Projects</a>
-            </li>
-            <li>
-              <a href="#contacts" class="d-block text-decoration-none text-primary">Contacts</a>
-            </li>
-            <li>
-              <a href="#resume" class="d-block text-decoration-none text-primary">Resume</a>
-            </li>
-          </ul>
-        </nav>
+  <div class="container-fluid">
+    <div class="row align-items-start h-100">
+      <aside class="col-12 col-md-3 mb-4 order-md-1 p-3" style="height: 100vh; position: sticky; top: 0; overflow-y: auto;">
+        <div class="sky-blue-bg rounded-4 shadow-lg h-100 p-4 d-flex flex-column">
+          <nav class="text-center d-flex flex-column justify-content-start" aria-label="Primary menu">
+            <h3 class="h5 mb-4 fw-bold text-dark">Menu</h3>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-3">
+                <button class="d-block w-100 text-decoration-none text-dark fw-500 py-2 px-3 rounded-3 hover-effect border-0 bg-transparent menu-btn" data-section="home">
+                  <i class="bi bi-house-door me-2"></i>Home
+                </button>
+              </li>
+              <li class="mb-3">
+                <button class="d-block w-100 text-decoration-none text-dark fw-500 py-2 px-3 rounded-3 hover-effect border-0 bg-transparent menu-btn" data-section="about">
+                  <i class="bi bi-person-circle me-2"></i>About me
+                </button>
+              </li>
+              <li class="mb-3">
+                <button class="d-block w-100 text-decoration-none text-dark fw-500 py-2 px-3 rounded-3 hover-effect border-0 bg-transparent menu-btn" data-section="projects">
+                  <i class="bi bi-briefcase me-2"></i>Projects
+                </button>
+              </li>
+              <li class="mb-3">
+                <button class="d-block w-100 text-decoration-none text-dark fw-500 py-2 px-3 rounded-3 hover-effect border-0 bg-transparent menu-btn" data-section="resume">
+                  <i class="bi bi-file-earmark me-2"></i>Resume
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </aside>
 
-      <main class="col-12 col-md-8 mb-4 order-md-2">
-        <section class="p-4 border rounded h-100 text-center text-md-start" aria-labelledby="hero-title">
-          <h2 id="hero-title" class="h4 text-primary">Hello, I’m Gene</h2>
-          <p class="text-muted mb-0">Welcome to my Virtual Assistant portfolio.</p>
+      <main class="col-12 col-md-9 mb-4 order-md-2 p-3" style="height: 100vh; overflow-y: auto;">
+        <section class="bg-white rounded-4 shadow-lg h-100 p-4 d-flex flex-column justify-content-center align-items-center text-center" aria-labelledby="hero-title">
+          
+          <!-- Hero Section (Home) -->
+          <div id="home" class="section-content">
+            <h2 id="hero-title" class="display-3 fw-bold text-primary mb-4">
+              <span class="text-dark">Hello, I'm</span> <span class="text-primary">Gene</span>
+            </h2>
+            <p class="text-muted mb-4 fs-5">Welcome to my Virtual Assistant portfolio.</p>
+          </div>
+
+          <!-- About Section -->
+          <div id="about" class="section-content d-none">
+            <h2 class="display-4 fw-bold text-primary mb-4">About Me</h2>
+            <p class="text-muted fs-5 mb-3">I'm a dedicated Virtual Assistant with 5+ years of experience in administrative support, scheduling, and email management.</p>
+            <p class="text-muted fs-5">I help businesses streamline their operations and focus on what matters most.</p>
+          </div>
+
+          <!-- Projects Section -->
+          <div id="projects" class="section-content d-none">
+            <h2 class="display-4 fw-bold text-primary mb-4">Projects</h2>
+            <div class="row text-start">
+              <div class="col-md-6 mb-3">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Project 1</h5>
+                    <p class="card-text">Description of your project goes here.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Project 2</h5>
+                    <p class="card-text">Description of your project goes here.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resume Section -->
+          <div id="resume" class="section-content d-none">
+            <h2 class="display-4 fw-bold text-primary mb-4">Resume</h2>
+            <p class="text-muted fs-5">Your resume content goes here.</p>
+          </div>
+
         </section>
       </main>
     </div>
   </div>
 
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Custom JS -->
-  <script src="script.js"></script>
+  <script>
+    document.querySelectorAll('.menu-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const section = this.getAttribute('data-section');
+        
+        // Hide all sections
+        document.querySelectorAll('.section-content').forEach(el => {
+          el.classList.add('d-none');
+        });
+        
+        // Show selected section
+        document.getElementById(section).classList.remove('d-none');
+      });
+    });
+  </script>
 </body>
 </html>

@@ -1,12 +1,46 @@
 body, html {
   height: 100vh; /* Full viewport height */
   margin: 0;
-  background-color: #ffffff; /* Elegant white background */
+  background-color: #1A2F5A; /* Elegant white background */
 }
 
-
+body { padding-top: 10px; }
 
 h1 {
   font-weight: 700;
+}
+
+/* Hero button spacing */
+section .btn { margin-top: 1rem; }
+
+/* Link focus for accessibility */
+a:focus { outline: 2px solid #0d6efd; outline-offset: 2px; }
+
+/* Dark‑mode toggle (optional) */
+[data-theme="dark"] {
+  background-color: #ffffff;
+  color: #e0e0e0;
+}
+[data-theme="dark"] .bg-light { background-color: #1e1e1e !important; }
+[data-theme="dark"] .border { border-color: #333 !important; }
+
+.sky-blue-bg {
+  background-color: #87CEEB;
+}
+
+/* Menu hover effect */
+.hover-effect {
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.hover-effect:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: translateX(5px);
+}
+
+/* Sticky sidebar */
+aside {
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
 }
 
